@@ -1,0 +1,104 @@
+@import "~bootstrap/scss/functions";
+@import "./helper/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~leaflet.markercluster/dist/MarkerCluster.css";
+@import "~leaflet.markercluster/dist/MarkerCluster.Default.css";
+
+.height-set {
+  height: 100vh;
+  // max-height: 100vh;
+  overflow-y: auto;
+
+  @media (max-width: 480px) {
+    height: 50vh;
+  }
+}
+
+.bg-select {
+  background-color: #f6f6f6;
+}
+
+.icon-size {
+  width: 14px;
+  height: 14px;
+}
+
+.qty-box {
+  min-height: 44px;
+  display: flex;
+
+  div {
+    background: #E2E2E2;
+    color: #9C9C9C;
+  }
+
+  .text-set {
+    line-height: 44px;
+  }
+
+  .box-width {
+    min-width: 146px;
+  }
+
+  .mask-yes {
+    background: #668AFE;
+    color: #FFFFFF;
+  }
+}
+
+.name-size {
+  font-size: 18px;
+}
+
+.context-size {
+  font-size: 16px;
+
+  .qty-set {
+    color: #668AFE;
+    font-size: 24px;
+  }
+}
+
+.btn-size {
+  font-size: 14px;
+}
+
+.info-color {
+  color: #888888;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+i {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  margin-right: 5px;
+
+  &.icon_set {
+    background: center center no-repeat;
+  }
+}
+
+.leaflet-popup-content-wrapper {
+  border: 2px solid #668AFE;
+  padding: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 21px;
+    height: 21px;
+    background: white;
+    border: 2px solid #668AFE;
+    border-top: 0;
+    border-left: 0;
+    transform: rotate(45deg);
+  }
+}
