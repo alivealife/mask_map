@@ -64,7 +64,6 @@ export default {
       bg_phone: BG_P,
     };
   },
-  methods: {},
   computed: {
     storeList() {
       return this.$store.state.storeList;

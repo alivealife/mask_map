@@ -66,15 +66,12 @@ export default new Vuex.Store({
     getList(context) {
       context.commit('LOADING', true);
       const county = new Set(); // 陣列，但無法加入重複內容(使用 add 內容)
-      // const town = new Set();
       context.state.storeList.forEach((item) => {
         if (item.properties.county !== '') {
           county.add(item.properties.county);
         }
-        // town.add(item.properties.town);
       });
       context.commit('SELECTBARCOUNTY', Array.from(county));// 轉成一般陣列
-      // vm.selectBarTown = Array.from(town);
     },
     filterCounty(context) {
       context.commit('FILTERDATA', context.state.storeList.filter((item) => item.properties.county === context.state.currentCounty));

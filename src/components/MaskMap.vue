@@ -8,8 +8,10 @@
       <select class="custom-select custom-select" v-model="currentTown">
         <option v-for="item in selectBarTown" :key="item" :value="item">{{ item }}</option>
       </select>
-            <h3 class="context-size mt-3">
-        有取得口罩數量的藥局有 <span class="qty-set">{{ showData.length }}</span> 家</h3>
+      <h3 class="context-size mt-3">
+        有取得口罩數量的藥局有
+        <span class="qty-set">{{ showData.length }}</span> 家
+      </h3>
     </section>
 
     <section
@@ -100,7 +102,7 @@ export default {
       return this.$store.state.showData;
     },
   },
-  created() {
+  mounted() {
     this.getStoreList();
   },
 };
